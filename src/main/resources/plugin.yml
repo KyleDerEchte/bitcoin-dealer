@@ -1,0 +1,5 @@
+name: BitcoinDealer
+main: de.kyleonaut.dealer.BitcoinDealerPlugin
+version: 1.0.0
+author: kyleonaut
+api-version: 1.13
