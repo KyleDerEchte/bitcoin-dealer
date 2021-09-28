@@ -87,8 +87,12 @@
                                     <shadedPattern>bitcoindealer.javax</shadedPattern>
                                 </relocation>
                                 <relocation>
-                                    <pattern>org</pattern>
-                                    <shadedPattern>bitcoindealer.org</shadedPattern>
+                                    <pattern>org.aopalliance</pattern>
+                                    <shadedPattern>bitcoindealer.org.aopalliance</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.checkerframework</pattern>
+                                    <shadedPattern>bitcoindealer.org.checkerframework</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>
