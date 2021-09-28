@@ -37,6 +37,7 @@ public class BitcoinDealerPlugin extends JavaPlugin {
         this.thread.start();
         Bukkit.getLogger().log(Level.INFO, "[BitcoinDealer] Start PriceTask.");
         Objects.requireNonNull(getCommand("btc")).setExecutor(bitcoinCommandResolver);
+        Objects.requireNonNull(getCommand("btc")).setTabCompleter(bitcoinCommandResolver);
     }
 
     @Override
