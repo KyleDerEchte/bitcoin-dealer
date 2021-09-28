@@ -1,7 +1,9 @@
 package de.kyleonaut.dealer.task;
 
+import com.google.inject.Inject;
+import com.google.inject.Singleton;
 import de.kyleonaut.dealer.repository.BitcoinRepository;
-import de.kyleonaut.dealer.service.BitcoinService;
+import de.kyleonaut.dealer.service.BitcoinPriceService;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.bukkit.Bukkit;
@@ -16,10 +18,11 @@ import java.util.logging.Level;
  * @version 1.0.0
  * created at 27.09.2021
  */
-@RequiredArgsConstructor
+@Singleton
+@RequiredArgsConstructor(onConstructor_ = @Inject)
 public class BitcoinPriceTask implements Runnable {
     private final BitcoinRepository repository;
-    private final BitcoinService service;
+    private final BitcoinPriceService service;
 
     @Setter
     private boolean isRunning = true;

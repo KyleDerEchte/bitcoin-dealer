@@ -1,6 +1,9 @@
 package de.kyleonaut.dealer.repository;
 
 
+import com.google.inject.Inject;
+import com.google.inject.Singleton;
+import lombok.RequiredArgsConstructor;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -16,6 +19,8 @@ import java.net.URL;
  * @version 1.0.0
  * created at 26.09.2021
  */
+@Singleton
+@RequiredArgsConstructor(onConstructor_ = @Inject)
 public class BitcoinRepository {
 
     public Double getPrice() throws IOException, ParseException {
