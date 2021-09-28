@@ -44,21 +44,4 @@ public class BitcoinCommandResolver implements CommandExecutor {
         }
         return false;
     }
-
-    public ItemStack createBitcoin() {
-        final ItemStack itemStack = new ItemStack(Material.SUNFLOWER);
-        final ItemMeta meta = itemStack.getItemMeta();
-        if (meta == null) return itemStack;
-        final String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-        meta.setLore(Arrays.asList("", "§7Dieser Bitcoin wurde am §e" + date + "§7 gekauft."));
-        meta.setDisplayName("§6Bitcoin");
-        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-        meta.addEnchant(Enchantment.DURABILITY, 1, true);
-        itemStack.setItemMeta(meta);
-        final net.minecraft.server.v1_16_R3.ItemStack nmsCopy = CraftItemStack.asNMSCopy(itemStack);
-        final NBTTagCompound nbtTag = nmsCopy.getOrCreateTag();
-        nbtTag.setDouble("price", service.getPrice());
-        nmsCopy.setTag(nbtTag);
-        return CraftItemStack.asBukkitCopy(nmsCopy);
-    }
 }
