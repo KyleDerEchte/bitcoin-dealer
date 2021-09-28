@@ -55,7 +55,7 @@ public class SellCommandController implements BitcoinCommand {
         final ItemMeta itemMeta = itemStack.getItemMeta();
         if (itemMeta == null) return itemStack;
         itemMeta.setDisplayName("§6Rechnung");
-        double res = Math.round(priceService.getPrice() - price);
+        double res = Math.round(priceService.getPrice() * 0.95 - price);
         if (res == 0) {
             itemMeta.setLore(Arrays.asList("", "§e" + playerName + " §7hat durch den Verkauf eines Bitcoins §ekeinen Gewinn§7 erzielt."));
         } else if (res > 0) {
