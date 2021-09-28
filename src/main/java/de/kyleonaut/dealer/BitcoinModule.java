@@ -3,6 +3,8 @@ package de.kyleonaut.dealer;
 import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import de.kyleonaut.dealer.provider.EconomyProvider;
+import net.milkbowl.vault.economy.Economy;
 
 /**
  * @author kyleonaut
@@ -23,5 +25,6 @@ public class BitcoinModule extends AbstractModule {
     @Override
     protected void configure() {
         bind(BitcoinDealerPlugin.class).toInstance(this.plugin);
+        bind(Economy.class).toProvider(EconomyProvider.class);
     }
 }
