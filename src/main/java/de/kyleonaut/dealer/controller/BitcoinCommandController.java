@@ -32,7 +32,7 @@ public class BitcoinCommandController {
 
     public void execute(String command, Player player, String[] args) {
         commands.forEach((commandName, bitcoinCommand) -> {
-            if (command.equals(commandName)) {
+            if (command.equalsIgnoreCase(commandName)) {
                 bitcoinCommand.execute(player, args);
             }
         });
