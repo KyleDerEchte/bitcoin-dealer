@@ -79,8 +79,16 @@
                         <configuration>
                             <relocations>
                                 <relocation>
-                                    <pattern>com.fasterxml.jackson</pattern>
-                                    <shadedPattern>hekate.com.fasterxml.jackson</shadedPattern>
+                                    <pattern>com.google</pattern>
+                                    <shadedPattern>bitcoindealer.com.google</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>javax</pattern>
+                                    <shadedPattern>bitcoindealer.javax</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org</pattern>
+                                    <shadedPattern>bitcoindealer.org</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>
