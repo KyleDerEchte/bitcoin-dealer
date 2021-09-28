@@ -24,7 +24,7 @@ public class InfoCommandController implements BitcoinCommand {
             return;
         }
         player.sendMessage("§7=== §8[§eBitcoin§8] §7===");
-        player.sendMessage("§e/btc buy <Anzahl> §7- Kaufe Bitcoins");
+        player.sendMessage("§e/btc buy §7- Kaufe Bitcoins");
         player.sendMessage("§e/btc sell §7- Verkaufe Bitcoins");
         player.sendMessage("§e/btc info §7- Zeigt die Info an");
         player.sendMessage("§7Aktueller Bitcoin Kurs: §e" + priceService.getPrice() + "$");
