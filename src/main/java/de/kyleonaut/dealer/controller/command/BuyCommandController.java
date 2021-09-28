@@ -54,7 +54,8 @@ public class BuyCommandController implements BitcoinCommand {
         final ItemMeta meta = itemStack.getItemMeta();
         if (meta == null) return itemStack;
         final String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-        meta.setLore(Arrays.asList("", "§7Dieser Bitcoin wurde am §e" + date + "§7 gekauft."));
+        final long price = Math.round(priceService.getPrice());
+        meta.setLore(Arrays.asList("", "§7Dieser Bitcoin wurde am §e" + date + "§7 gekauft.", "§7Gerundeter Kaufpreis: §e" + price + "$"));
         meta.setDisplayName("§6Bitcoin");
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         meta.addEnchant(Enchantment.DURABILITY, 1, true);

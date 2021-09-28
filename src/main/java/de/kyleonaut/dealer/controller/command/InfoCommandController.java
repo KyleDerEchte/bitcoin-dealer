@@ -28,5 +28,6 @@ public class InfoCommandController implements BitcoinCommand {
         player.sendMessage("§e/btc sell §7- Verkaufe Bitcoins");
         player.sendMessage("§e/btc info §7- Zeigt die Info an");
         player.sendMessage("§7Aktueller Bitcoin Kurs: §e" + priceService.getPrice() + "$");
+        player.sendMessage("§7Die Maklergebühr beträgt §e5%");
     }
 }
