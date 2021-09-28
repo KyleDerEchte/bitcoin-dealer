@@ -1,6 +1,7 @@
 package de.kyleonaut.dealer.controller.command;
 
 import com.google.inject.Singleton;
+import de.kyleonaut.dealer.util.Messages;
 import org.bukkit.entity.Player;
 
 /**
@@ -12,6 +13,9 @@ import org.bukkit.entity.Player;
 public class SellCommandController implements BitcoinCommand {
     @Override
     public void execute(Player player, String[] args) {
-
+        if (!player.hasPermission("bitcoin.dealer.sell")){
+            player.sendMessage(Messages.NO_PERMISSION);
+            return;
+        }
     }
 }

@@ -39,6 +39,8 @@ public class BitcoinCommandResolver implements CommandExecutor {
         }
         if (strings.length >= 1) {
             commandController.execute(strings[0], player, Arrays.copyOfRange(strings, 1, strings.length));
+        } else {
+            commandController.execute("info", player, strings);
         }
         return false;
     }

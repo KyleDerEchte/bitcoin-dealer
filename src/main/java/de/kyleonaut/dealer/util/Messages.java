@@ -6,5 +6,5 @@ package de.kyleonaut.dealer.util;
  * created at 28.09.2021
  */
 public class Messages {
-    public static final String NO_PERMISSION = "§8[§eBit§6coin§8] §cDu darfst diesen Befehl nicht ausführen.";
+    public static final String NO_PERMISSION = "§8[§eBitcoin§8] §cDu darfst diesen Befehl nicht ausführen.";
 }

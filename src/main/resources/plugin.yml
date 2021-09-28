@@ -7,4 +7,11 @@ depend:
   - Vault
 commands:
   btc:
-    permission: bitcoin.dealer.command
+
+permissions:
+  bitcoin.dealer.buy:
+    default: op
+  bitcoin.dealer.sell:
+    default: op
+  bitcoin.dealer.info:
+    default: op
