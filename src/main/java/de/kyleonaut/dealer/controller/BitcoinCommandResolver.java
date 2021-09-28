@@ -5,20 +5,11 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import de.kyleonaut.dealer.service.BitcoinPriceService;
 import lombok.RequiredArgsConstructor;
-import net.minecraft.server.v1_16_R3.NBTTagCompound;
-import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.craftbukkit.v1_16_R3.inventory.CraftItemStack;
-import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemFlag;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
 /**
